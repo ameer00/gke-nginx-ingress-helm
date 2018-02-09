@@ -147,7 +147,7 @@ NAME      TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
 kuard     ClusterIP   10.7.253.136   <none>        80/TCP    8s
 ```
 
-## Deploying the NGINX Ingress Controller
+## Deploying the NGINX Ingress Controller via Helm
 
 Kubernetes platform allows for administrators to bring their own Ingress
 Controllers instead of using the cloud provider's built-in offering. 
@@ -160,7 +160,7 @@ firewall rules within the Service's VPC to allow web HTTP(S) traffic to the load
 balancer frontend IP address.  Here is a basic flow of the NGINX ingress
 solution on Kubernetes Engine.
 
-### NGINX Ingress Controller on Kubernetes Engine via Helm
+### NGINX Ingress Controller on Kubernetes Engine
 
 <img src="https://github.com/ameer00/community/blob/master/tutorials/nginx-ingress-gke/Nginx%20Ingress%20on%20GCP%20-%20Fig%2002.png" width="65%">
 
