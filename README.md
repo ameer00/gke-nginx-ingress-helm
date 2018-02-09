@@ -199,7 +199,7 @@ Resource). The default backend exposes two URLs:
 -  `/` that returns 404
 
 
-## Configure an Ingress Resource
+## Configure Ingress Resource to use NGINX Ingress Controller
 
 An Ingress Resource object is a collection of L7 rules for routing inbound traffic to Kubernetes Services.  Multiple rules can be defined in one Ingress Resource or they can be split up into multiple Ingress Resource manifests. The Ingress Resource also determines which controller to utilize to serve traffic.  This can be set with an annotation, `kubernetes.io/ingress.class`, in the metadata section of the Ingress Resource.  For the NGINX controller, use the value `nginx` as shown below:
 
@@ -255,7 +255,7 @@ ingress-resource   *                   80        `
 ### Test Ingress and default backend
 
 You should now be able to access the web application by going to the EXTERNAL-IP
-address of the NGINX ingress controller (from the output above).  
+address of the NGINX ingress controller (from the output of the `kubectl get service nginx-ingress-controller` above).  
 
 ![image](https://github.com/ameer00/community/blob/master/tutorials/nginx-ingress-gke/Kuard-ingress.png)
 
